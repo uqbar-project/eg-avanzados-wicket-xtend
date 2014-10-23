@@ -4,6 +4,7 @@ import org.apache.wicket.markup.html.basic.Label
 import org.apache.wicket.markup.html.panel.Panel
 import org.uqbar.ui.wicket.misc.paneles.modelo.Cuenta
 import org.uqbar.wicket.xtend.WicketExtensionFactoryMethods
+import org.uqbar.wicket.xtend.XAttributeModifier
 import org.uqbar.wicket.xtend.XLink
 
 /**
@@ -18,8 +19,10 @@ class CuentaPanel extends Panel {
 		
 		this.addChild(new Label("numero"))
 		this.addChild(new Label("tipo"))
+		
 		val saldoLabel = new Label("saldo")
-//		saldoLabel.add(new XAttributeModifier("class", [Float saldo | if (saldo < 0) "saldoNegativo" else ""]))
+		saldoLabel.add(new XAttributeModifier("class", [Float saldo | if (saldo < 0) "saldoNegativo" else "saldoPositivo"]))
+		
 		this.addChild(saldoLabel)
 		
 		this.addChild(new XLink("darlePlata") => [

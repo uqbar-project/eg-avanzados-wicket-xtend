@@ -1,17 +1,38 @@
 <html>
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+		
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Ejemplos Avanzados de Reutilizaci&oacute;n en Wicket</title>
 	<style type="text/css">
 		.saldoNegativo {
 			font-size: large;
 			font-weight: bolder;
 			color: red;
 		}
-	
+		.saldoPositivo {
+			font-size: large;
+			font-weight: bolder;
+			color: green;
+		}
 	</style>
 </head>
 <body>
+
+ <div class="container">
+	<div class="page-header">
+		<h2><img src="wicket-logo.png"/>&nbsp;Ejemplos de Reutilizaci&oacute;n en Wicket &nbsp;<small>(Paneles)</small></h2>
+	</div>
 	
-	<h1>Detalle de Usuario</h1>
+	<h3>Detalle de Usuario</h3>
 	<dl>
 		<dt>Nombre:</dt> 
 		<dd><span wicket:id="nombre">Jose</span></dd>
@@ -20,8 +41,13 @@
 		<dt>Dni:</dt> 
 		<dd><span wicket:id="dni">Jose</span></dd>
 	</dl>
-	<div wicket:id="cuenta" style="border: 1px solid red;">
-			DETALLE DE CUENTA
+	<div class="row">
+		<div class="jumbotron col-sm-6 col-md-6">
+			<div wicket:id="cuenta">
+					DETALLE DE CUENTA
+			</div>
+		</div>
 	</div>
+ </div>
 </body>
 </html>
