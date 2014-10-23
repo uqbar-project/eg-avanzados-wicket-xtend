@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- JQUERY -->
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		
+		<!-- BOOTSTRAP -->
+		<link rel="stylesheet" 
+		    href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css">
+		<script
+			src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Ejemplos Avanzados de Reutilizaci&oacute;n en Wicket</title>
+	</head>
+<body>
+ <div class="container">
+	<div class="page-header">
+		<h2><img src="wicket-logo.png"/>&nbsp;Ejemplos de Reutilizaci&oacute;n en Wicket &nbsp;<small>(Herencia)</small></h2>
+	</div>
+
+	<h1>Detalles del Cliente</h1>
+	<div class="row">
+	
+		<dl class="dl-horizontal">
+		    <dt>Nombre</dt>
+		    <dd wicket:id="nombre">Pepe</dd>
+		    
+		    <dt>Apellido</dt>
+		    <dd wicket:id="apellido">Muleiro</dd>
+		    
+		    <dt>Domicilio</dt>
+		    <dd wicket:id="domicilio">Galicia 234</dd>
+	
+			<!-- CHILDS! -->
+			<wicket:child></wicket:child>
+
+		</dl>
+
+	</div>
+	
+	<a wicket:id="volver" class="btn btn-default">Volver</a>
+	
+ </div>
+</body>
+</html>

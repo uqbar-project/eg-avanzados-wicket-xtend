@@ -19,7 +19,7 @@ class CuentaPanel extends Panel {
 		this.addChild(new Label("numero"))
 		this.addChild(new Label("tipo"))
 		val saldoLabel = new Label("saldo")
-		//saldoLabel.addBehavior(new XAttributeModifier("class", [Float saldo | if (saldo < 0) "saldoNegativo" else ""]))
+//		saldoLabel.add(new XAttributeModifier("class", [Float saldo | if (saldo < 0) "saldoNegativo" else ""]))
 		this.addChild(saldoLabel)
 		
 		this.addChild(new XLink("darlePlata") => [
