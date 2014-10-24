@@ -1,0 +1,38 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+		
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Ejemplos Avanzados de Reutilizaci&oacute;n en Wicket</title>
+</head>
+<body>
+
+<div class="container">
+	<div class="page-header">
+		<h2><img src="wicket-logo.png"/>&nbsp;Ejemplos de Reutilizaci&oacute;n en Wicket &nbsp;<small>(Paneles)</small></h2>
+	</div>
+
+	<form wicket:id="comprarForm">
+	<dl>
+		<dt>Producto</dt>
+		<dd wicket:id="producto.nombre"></dd>
+		<dt>Medio de Pago</dt>
+		<select wicket:id="medioDePago"></select>
+	</dl>
+		
+		<div wicket:id="medioDePagoPanel" class="jumbotron col-md-6 col-sm-6">
+			<!-- PANELES! -->
+		</div>
+		
+	</form>
+</div>
+</body>
+</html>

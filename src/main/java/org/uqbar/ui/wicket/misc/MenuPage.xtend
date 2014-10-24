@@ -3,14 +3,15 @@ package org.uqbar.ui.wicket.misc
 import org.apache.wicket.markup.html.WebPage
 import org.apache.wicket.markup.html.link.BookmarkablePageLink
 import org.apache.wicket.request.mapper.parameter.PageParameters
-import org.uqbar.ui.wicket.misc.paneles.UsuarioPage
-import org.uqbar.wicket.xtend.WicketExtensionFactoryMethods
-import org.uqbar.wicket.xtend.XLink
+import org.uqbar.ui.wicket.misc.herencia.ClientePage
 import org.uqbar.ui.wicket.misc.herencia.ClienteVIPPage
 import org.uqbar.ui.wicket.misc.herencia.model.ClienteVIP
 import org.uqbar.ui.wicket.misc.herencia.model.Descuento
 import org.uqbar.ui.wicket.misc.herencia.model.Producto
-import org.uqbar.ui.wicket.misc.herencia.ClientePage
+import org.uqbar.ui.wicket.misc.paneles.UsuarioPage
+import org.uqbar.ui.wicket.misc.paneles.dinamicos.PagarCompra
+import org.uqbar.wicket.xtend.WicketExtensionFactoryMethods
+import org.uqbar.wicket.xtend.XLink
 
 class MenuPage extends WebPage {
 	extension WicketExtensionFactoryMethods = new WicketExtensionFactoryMethods
@@ -27,6 +28,10 @@ class MenuPage extends WebPage {
 		
 		this.addChild(new XLink("ejemploPaneles") => [
 			onClick = [| setResponsePage(new UsuarioPage)]
+		])
+		
+		this.addChild(new XLink("panelesDinamicos") => [
+			onClick = [| setResponsePage(PagarCompra) ]
 		])
 		
 		val params = new PageParameters;
